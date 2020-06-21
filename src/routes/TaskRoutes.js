@@ -13,5 +13,8 @@ router.delete('/:id', TaskController.delete)
 router.put('/:id/:done', TaskController.done)
 router.get('/filter/late', TaskValidationMacAddress, TaskController.late)
 router.get('/filter/today', TaskValidationMacAddress, TaskController.today)
+router.get('/filter/week',TaskValidationMacAddress, TaskController.week)
+router.get('/filter/month',TaskValidationMacAddress, TaskController.month)
+router.get('/filter/year', TaskValidationMacAddress, TaskController.year)
 
 module.exports = router
