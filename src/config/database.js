@@ -1,6 +1,6 @@
 const mongoose = require ('mongoose')
 
-const url = 'mongodb://localhost:27017/todo'
+const url = 'mongodb+srv://andrews:33542859@cluster0-kyyqb.mongodb.net/todo?retryWrites=true&w=majority'
 
 mongoose.connect(url, { useNewUrlParser: true })
 

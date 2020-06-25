@@ -11,8 +11,10 @@
   "author": "Andrews Carlos",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "date-fns": "^2.14.0",
     "express": "^4.17.1",
+    "heroku": "^7.42.1",
     "mongoose": "^5.9.19"
   },
   "devDependencies": {
