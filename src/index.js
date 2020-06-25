@@ -1,6 +1,8 @@
 const express = require ('express')
 const cors = require('cors')
 const server = express()
+const PORT = process.env.PORT || 3001
+
 server.use(express.json())
 server.use(cors());
 
@@ -10,6 +12,6 @@ server.use('/task', TaskRoutes )
 
 
 
-server.listen(3001, ()=>{
-    console.log('Serve is running on port 3001 !')
+server.listen(PORT, ()=>{
+    console.log(`Serve is running on port ${PORT} !`)
 })
