@@ -1,21 +1,21 @@
 const express = require ('express')
 
 
-//const cors = require('cors')
+const cors = require('cors')
 
 
 const server = express()
-const PORT = process.env.PORT || 3001
+const PORT = 80
 
 server.use(express.json())
-//server.use(cors());
+server.use(cors());
 
 const TaskRoutes = require ('./routes/TaskRoutes')
 
 server.use('/task', TaskRoutes )
 
 server.get('/', (req, res)=>{
-    return res.json({message: 'Deu Certo !!!!'})
+    return res.json({message: 'Deu Certo porta 80'})
 })
 
 server.listen(PORT, ()=>{
