@@ -1,7 +1,6 @@
 const express = require ('express')
 
-
-git const cors = require('cors')
+const cors = require('cors')
 
 
 const server = express()
