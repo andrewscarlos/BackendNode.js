@@ -11,7 +11,7 @@ server.use(cors());
 
 const TaskRoutes = require ('./routes/TaskRoutes')
 
-server.use( TaskRoutes )
+server.use('/task', TaskRoutes )
 
 
 

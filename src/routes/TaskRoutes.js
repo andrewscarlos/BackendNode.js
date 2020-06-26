@@ -9,12 +9,7 @@ const TaskValidation = require('../middlewares/TaskValidation')
 router.post('/', TaskValidation, TaskController.create)
 
 
-router.get('/', (req, res)=>{
-    return res.json({message: 'Deu Certo !!!!'})
-})
-router.post('/teste', (req, res)=>{
-    return res.json({message: 'Deu Certo !!!!'})
-})
+
 
 
 //ROTAS DELETE
