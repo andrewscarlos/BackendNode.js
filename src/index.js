@@ -13,9 +13,7 @@ const TaskRoutes = require ('./routes/TaskRoutes')
 
 server.use( TaskRoutes )
 
-server.get('/', (req, res)=>{
-    return res.json({message: 'Deu Certo !!!!'})
-})
+
 
 server.listen(PORT, ()=>{
     console.log(`Serve is running on port ${PORT} !`)

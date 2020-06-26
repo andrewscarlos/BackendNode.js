@@ -7,17 +7,23 @@ const current = new Date()
 class TaskController {  // essa classe possui todas as funcoes da pag Task
 
    async create(req, res){ // essa funcao ira criar uma nova Task
-        const task = new TaskModel(req.body) // async serve para o node esperar a resposta da funcao sem executar outra coisa antes de chegar a resp dessa funcao
-           await task
-            .save() // sava as informacoes da req.body no mongo
-
-            .then(response =>{
-                return res.status(200).json(response)
+        try {
+            const task = new TaskModel(req.body) // async serve para o node esperar a resposta da funcao sem executar outra coisa antes de chegar a resp dessa funcao
+            await task
+             .save() // sava as informacoes da req.body no mongo
+ 
+             .then(response =>{
+                 return res.status(200).json(response)
+             })
+ 
+             .catch(error =>{
+                 return res.status(500).json(error)
+             })
+        } catch (error) {
+            return res.status(error.status).json({
+                erro: "error create"
             })
-
-            .catch(error =>{
-                return res.status(500).json(error)
-            })
+        }
     }
     async update(req, res){
         await TaskModel.findByIdAndUpdate({ '_id': req.params.id }, req.body, { new: true })
