@@ -1,10 +1,14 @@
 const express = require ('express')
-const cors = require('cors')
+
+
+//const cors = require('cors')
+
+
 const server = express()
 const PORT = process.env.PORT || 3001
 
 server.use(express.json())
-server.use(cors());
+//server.use(cors());
 
 const TaskRoutes = require ('./routes/TaskRoutes')
 
