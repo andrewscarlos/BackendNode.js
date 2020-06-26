@@ -11,7 +11,7 @@ server.use(cors());
 
 const TaskRoutes = require ('./routes/TaskRoutes')
 
-server.use('/task', TaskRoutes )
+server.use( TaskRoutes )
 
 server.get('/', (req, res)=>{
     return res.json({message: 'Deu Certo !!!!'})
